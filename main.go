@@ -1,11 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"log"
+	types "restAPI/src/types"
 )
 
+func changeValue(p types.Person) {
+	p.Name = "Doe"
+	p.Age = 40
+}
+
 func main() {
-	fmt.Println("Hello, World!")
-	log.Println("Hello, World!")
+	person := types.Person{Name: "John", Age: 30}
+	changeValue(person)
+	println(person.Name, person.Age)
 }
